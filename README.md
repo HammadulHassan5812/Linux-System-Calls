@@ -122,6 +122,7 @@ The program handles invalid file paths for the input, output, and error files.
 If the input file cannot be opened, an appropriate error message is output using stderr (without redirection).
 
 
+
 **6-Complex Number Array Processing in C**
 This C program demonstrates the use of **shared memory** to perform various operations on an array of complex numbers using multiple child processes. The program computes the complex conjugate, magnitude, and sum of the provided complex numbers.
 
