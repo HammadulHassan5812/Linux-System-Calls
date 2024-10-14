@@ -127,6 +127,19 @@ If the input file cannot be opened, an appropriate error message is output using
 This C program demonstrates the use of **shared memory** to perform various operations on an array of complex numbers using multiple child processes. The program computes the complex conjugate, magnitude, and sum of the provided complex numbers.
 
 
+**7-Multi-Stage File Processing in C**
+This C program implements a multi-stage file processing system that utilizes named pipes (FIFOs) for inter-process communication. The program reads an array of integers from a file and performs multiple transformations across different stages.
+
+
+**Compile the program:**
+gcc multi_stage_processing.c -o multi_stage_processing
+
+
+**Run the program with command-line arguments:**
+./multi_stage_processing input.txt 20
+
+
+
 
 
 
