@@ -85,6 +85,42 @@ Run the game:
 ./battleship
 
 
+**5-File Descriptor Duplication and Redirection in C++**
+This C++ program demonstrates file input/output redirection using file descriptor duplication and redirection techniques (dup() and dup2()). The program reads data from an input file, processes it, and redirects standard output and standard error to specified output files.
+
+**Overview:**
+Input File: Reads data from a specified input file.
+Output File: Redirects standard output (stdout) to a specified output file.
+Error File: Redirects standard error (stderr) to a specified error file.
+
+**Functionality:**
+
+**File Handling:**
+The program accepts three command-line arguments:
+Input File: The file to read data from (e.g., input.txt).
+Output File: The file to redirect standard output to (e.g., output.txt).
+Error File: The file to redirect standard error to (e.g., error.txt).
+It opens the input file for reading and the output/error files for writing.
+
+**Duplicating and Redirecting stdout and stderr:**
+The original stdout and stderr file descriptors are saved using dup().
+dup2() is used to redirect stdout to the output file and stderr to the error file.
+
+**Processing Input:**
+The program reads lines from the input file and processes the data:
+For each valid number, it outputs a processed number (e.g., performing operations like multiplication).
+It handles invalid numbers (e.g., non-numeric values) and division by zero, outputting error messages to stderr (which is redirected).
+
+**Restoring Original File Descriptors:**
+After processing, the original stdout and stderr are restored using dup() and dup2().
+A confirmation message is printed to the console indicating that the file descriptors have been restored.
+
+**Error Handling:**
+The program handles invalid file paths for the input, output, and error files.
+If the input file cannot be opened, an appropriate error message is output using stderr (without redirection).
+
+
+
 
 
 
