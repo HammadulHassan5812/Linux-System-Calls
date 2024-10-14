@@ -85,6 +85,7 @@ Run the game:
 ./battleship
 
 
+
 **5-File Descriptor Duplication and Redirection in C++**
 This C++ program demonstrates file input/output redirection using file descriptor duplication and redirection techniques (dup() and dup2()). The program reads data from an input file, processes it, and redirects standard output and standard error to specified output files.
 
