@@ -86,6 +86,7 @@ Run the game:
 
 
 
+
 **5-File Descriptor Duplication and Redirection in C++**
 This C++ program demonstrates file input/output redirection using file descriptor duplication and redirection techniques (dup() and dup2()). The program reads data from an input file, processes it, and redirects standard output and standard error to specified output files.
 
@@ -119,6 +120,11 @@ A confirmation message is printed to the console indicating that the file descri
 **Error Handling:**
 The program handles invalid file paths for the input, output, and error files.
 If the input file cannot be opened, an appropriate error message is output using stderr (without redirection).
+
+
+**6-Complex Number Array Processing in C**
+This C program demonstrates the use of **shared memory** to perform various operations on an array of complex numbers using multiple child processes. The program computes the complex conjugate, magnitude, and sum of the provided complex numbers.
+
 
 
 
