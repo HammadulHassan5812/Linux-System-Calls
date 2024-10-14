@@ -7,3 +7,14 @@ Command execution with tokenization (e.g., ls, cp, cd, pwd, mv, mkdir, rmdir, rm
 Continuous user interaction with child processes created using system calls like execvp or execlp.
 The program runs until the user types exit.
 
+**2-Automated Production Line Process Management**
+This C program simulates process management for a company's automated production line, consisting of four stages: Material Preparation, Assembly, Quality Check, and Packaging.
+**Key Features**:
+Stage Execution: Each stage runs in a separate process and simulates work by sleeping for a few seconds.
+Process Coordination: Ensures each stage completes before the next starts using waitpid(). In case of failure, a stage is retried up to two times.
+Error Handling: Logs issues and terminates the line if a stage fails after multiple attempts.
+Completion Report: Provides a summary of successful completions and retry attempts.
+The program makes use of process management techniques like fork(), waitpid(), exit(), and signal handling, while simulating random failures with a 30% chance per stage.
+
+
+
