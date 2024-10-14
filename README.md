@@ -33,8 +33,10 @@ Redaction Example: Input "SSN: 123-45-6789" becomes "SSN: [REDACTED]".
 
 **4-BattleShip Game**
 This is a C++ implementation of the classic Battleship game, where two players (Player 1 and Player 2) play on separate 5x5 grids to guess and sink each other's ships. The game uses pipes for communication between two processes representing the players, ensuring turn-based gameplay with real-time interaction.
+
 **Game Rules:**
 Each player has a 5x5 grid, with 3 ships placed at the beginning of the game.
+
 **Ship Sizes:**
 Ship 1: 2 spaces
 Ship 2: 3 spaces
@@ -44,15 +46,18 @@ Players take turns to guess the location of their opponent's ships by providing 
 Each guess results in either a Hit (H) or Miss (M).
 The goal is to sink all the opponent's ships by guessing their locations.
 The game ends when one player successfully sinks all three ships of the opponent.
+
 **Communication Between Players:**
 The game uses two pipes for communication between Player 1 and Player 2:
 Pipe 1: Player 1 sends their guesses to Player 2.
 Pipe 2: Player 2 sends their guesses to Player 1.
 After each guess, the player will wait for the response from the other player (either H for Hit or M for Miss), and then proceed to their next turn.
+
 **Features:**
 Turn-Based Gameplay: Each player must wait for the other player's move before taking their next turn.
 Hit/Miss Feedback: Players are informed whether their guess hits or misses the opponent's ships.
 Error Handling: Proper handling of communication failures through pipes ensures smooth gameplay.
+
 **Game Flow:**
 Player 1's Turn:
 Place ships on the grid.
@@ -66,12 +71,14 @@ Check for Hit/Miss and respond through Pipe 1.
 Send their own guess (row, col) through Pipe 2.
 Wait for Player 1's response (Hit/Miss).
 If all Player 1's ships are hit, Player 2 wins and the game ends.
+
 **Requirements:**
 Pipes: For bidirectional communication between Player 1 and Player 2.
 fork(): To create separate processes for Player 1 and Player 2.
 waitpid(): To ensure synchronization between player moves and prevent multiple guesses by the same player in a row.
 Error Handling: For managing errors in pipe communication, ensuring the game does not crash unexpectedly.
 How to Compile and Run:
+
 **Compile the game:**
 g++ battleship.cpp -o battleship
 Run the game:
