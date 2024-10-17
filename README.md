@@ -174,6 +174,34 @@ Conclusion
 This simple chat system demonstrates inter-process communication (IPC) using named pipes (FIFO) in C for unrelated processes.
 
 
+**Client-Server Calculation System**
+This project implements a simple client-server system using FIFO pipes for inter-process communication. The client sends a mathematical expression to the server, the server evaluates the expression, and the result is returned to the client.
+
+**Features**
+Client: Takes a mathematical expression as input (e.g., 5 + 3) and sends it to the server via a FIFO pipe.
+Server: Reads the expression from the client, evaluates it, and sends the result back to the client using another FIFO pipe.
+Multiple Requests: Both processes handle multiple requests and responses efficiently.
+
+**Setup and Usage**
+Compile the Client and Server Programs:
+gcc client.c -o client
+gcc server.c -o server
+
+Create FIFO Pipes:
+mkfifo fifo_client_to_server
+mkfifo fifo_server_to_client
+
+
+Run the Server:
+./server
+
+
+Run the Client:
+./client
+
+
+
+
 
 
 
