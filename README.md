@@ -141,7 +141,6 @@ gcc multi_stage_processing.c -o multi_stage_processing
 
 
 **8-FIFO Pipes Chat System**
-
 This project implements a simple chat system using FIFO pipes in C, enabling communication between two unrelated processes: one for sending messages (sender.c) and another for receiving them (receiver.c). The system uses a named pipe (FIFO) to facilitate message exchange.
 
 **Files**
@@ -169,7 +168,6 @@ The receiver should be started first to avoid blocking the sender.
 Cleanup
 After using the programs, you can remove the FIFO:
 
-bash
 Copy code
 rm chatpipe
 Conclusion
